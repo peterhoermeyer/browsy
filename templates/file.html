@@ -1,0 +1,4 @@
+<div class="file" (click)="onClick(file)" [ngClass]="{'open': file.isOpen, 'folder': file.content === ''}">
+    <div class="icon"></div>
+    <input type="text" [(ngModel)]="file.title">
+</div>

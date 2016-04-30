@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>code-express 2</title>
+  <link rel="stylesheet" href="css/normalize.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="css/app.css" media="screen" type="text/css">
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+  <script>
+    System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/browsyboot').then(null, console.error.bind(console));
+  </script>
+</head>
+
+<body>
+  <browsy>browsy</browsy>
+</body>
+</html>

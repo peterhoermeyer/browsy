@@ -1,0 +1,35 @@
+[
+    {
+
+            "content": "",
+            "description": "click to see more",
+            "id": "2",
+            "parentId":" 1",
+            "title": "folder 1",
+            "width": "",
+            "height": ""
+        
+    },
+    {
+
+            "content": "test.html",
+            "description": "this is somne test html",
+            "id": "3",
+            "parentId":" 1",
+            "title": "my text file",
+            "width": "",
+            "height": ""
+
+    },
+    {
+
+            "content": "",
+            "description": "has no children",
+            "id": "4",
+            "parentId":" 1",
+            "title": "Empty folder",
+            "width": "",
+            "height": ""
+
+    }
+]

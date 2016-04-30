@@ -1,0 +1,25 @@
+.file {
+    float: left;
+    max-width: 100px;
+    margin: .5em;
+}
+
+.file input {
+    max-width: 96%;
+    margin-top: 0.2em;
+    font-size: 0.8em;
+}
+
+.file .icon {
+    background: url('./img/icons/file.png') no-repeat;
+    width: 64px;
+    height: 64px;
+}
+
+.file.folder .icon {
+    background-image: url('./img/icons/folder.png');
+}
+
+.file:hover, .file.open {
+    font-weight: bold;
+}

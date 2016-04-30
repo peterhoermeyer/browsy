@@ -1,0 +1,3 @@
+1. npm install will install all dependencies (package.json)
+
+2. npm start to start server and typescript transpiler

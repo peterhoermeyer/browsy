@@ -1,0 +1,27 @@
+.fenster {
+    position: absolute;
+    z-index: 5000;
+    float: left;
+    left: 5%;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(55, 55, 55, .6);
+    box-sizing: border-box;
+}
+
+.fenster header {
+    left: 0;
+    right: 0;
+    padding: 1em;
+}
+
+.fenster header h2 {
+    margin-top: 0px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.fenster iframe {
+    width: 320px;
+    height: 480px;
+    border: none;
+}
