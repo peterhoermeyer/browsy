@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {File} from './app/class/file';
+import {File} from '../classes/file';
 
 @Component({
     selector: 'file',
@@ -10,12 +10,12 @@ import {File} from './app/class/file';
 export class FileComponent {
     public file: File;
     public isRenaming = false;
-    
+
     onClick() {
         this.file.isOpen = true;
     }
-    
+
     onLabelClick() {
-        
+
     }
 }

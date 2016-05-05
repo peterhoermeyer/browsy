@@ -10,7 +10,7 @@ export class FileService {
     constructor(private _http: Http) { }
 
     public getFiles(folderId: number): Observable<File[]> {
-        
+
         if (window.location.href.indexOf('localhost') > -1) {
             // use mockup data if in local dev mode
             console.log('using mockup data');

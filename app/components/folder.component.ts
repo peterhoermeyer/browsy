@@ -17,14 +17,14 @@ export class FolderComponent {
     public id: number = 1;
     public folder: File; // holds own File-Object
     public children: File[] = [];
-    
+
     @Output() fileClicked: EventEmitter<File> = new EventEmitter(); // inform browsy on folder open
     @Output() folderClosed: EventEmitter<File> = new EventEmitter(); // inform browsy on folder close
-    
+
     public onFileClicked(file: File) {
         this.fileClicked.emit(file);
     }
-    
+
     /**
      * Close a folder view
      */
@@ -32,8 +32,8 @@ export class FolderComponent {
         this.folderClosed.emit(folder);
         this.folder.isOpen = false;
     }
-    
-    constructor(private _fileService: FileService) {}
+
+    constructor(private _fileService: FileService) { }
 
     /**
      * Get All Files from FileService.
@@ -55,7 +55,7 @@ export class FolderComponent {
             if (this.id === 1) {
                 // TODO: set styling attrs for desktop folder
             }
-        }       
+        }
         this.getFiles(this.id);
     }
 

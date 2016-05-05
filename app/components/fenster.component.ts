@@ -1,5 +1,5 @@
 import {Component, Output, EventEmitter} from 'angular2/core';
-import {File} from './app/classes/file'; // interface
+import {File} from '../classes/file'; // interface
 
 @Component({
     selector: 'fenster',
