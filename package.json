@@ -1,5 +1,5 @@
 {
-  "name": "code-express",
+  "name": "browsy",
   "version": "1.0.0",
   "scripts": {
     "tsc": "tsc",
