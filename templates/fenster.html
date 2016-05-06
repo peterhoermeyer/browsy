@@ -1,12 +1,10 @@
-<div class="fenster">
-    <header>
-        <h2>{{fenster.title}}</h2>
-        <div class="btn btn-close" (click)="onClose(fenster)">X</div>
-    </header>
+<header>
+    <h2>{{fenster.title}}</h2>
+    <div class="btn btn-close" (click)="onClose(fenster)">X</div>
+</header>
 
-    <div *ngIf="fenster.content" class="content">
-        <iframe src="{{fenster.content}}"></iframe>
-    </div>
-
-    <footer></footer>
+<div *ngIf="fenster.content" class="content">
+    <iframe src="{{fenster.content}}"></iframe>
 </div>
+
+<footer></footer>

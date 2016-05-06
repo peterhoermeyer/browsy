@@ -1,12 +1,10 @@
-<div class="folder" [ngClass]="{'desktop': folder.id < 2}">
-    <header>
-        <h2>{{folder.title}}</h2>
-        <div class="btn-close" *ngIf="folder.id > 1" (click)="onClose(folder)">X</div>
-    </header>
-    <div *ngIf="children">
-        <file *ngFor="#child of children" [file]="child" (click)="onFileClicked(child)"></file>
-    </div>
-    <footer>
-        
-    </footer>
+<header>
+    <h2>{{folder.title}}</h2>
+    <div class="btn-close" *ngIf="folder.id > 1" (click)="onClose(folder)">X</div>
+</header>
+<div *ngIf="children">
+    <file *ngFor="#child of children" [file]="child" (click)="onFileClicked(child)"></file>
 </div>
+<footer>
+    
+</footer>

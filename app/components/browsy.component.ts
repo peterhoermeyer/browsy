@@ -15,27 +15,26 @@ import {HTTP_PROVIDERS} from 'angular2/http';
     directives: [FolderComponent, FensterComponent],
     styleUrls: ['./css/browsy.css']
 })
-export class BrowsyComponent {
-    
+export class BrowsyComponent implements OnInit {
+    public desktopFolder: File;
     public folders: File[] = [];
     public fensters: File[] = [];
 
-    constructor() {}
+    constructor() { }
 
     public ngOnInit() {
         // init with desktop folder
-        this.folders.push({
-
-                id: 1,
-                title: 'desktop',
-                parentId: 0,
-                content: '',
-                isOpen: true
-
-        });
+        this.desktopFolder = {
+            id: 1,
+            title: 'desktop',
+            parentId: 0,
+            content: '',
+            isOpen: true
+        };
     }
 
     fileClicked(file) {
+        // files without content are being treated as folder components
         if (file.content === '') {
             this.addFolder(file);
         }
@@ -43,27 +42,27 @@ export class BrowsyComponent {
             this.addFenster(file);
         }
     }
-    
+
     folderClosed(folder) {
         var index = this.folders.indexOf(folder);
         if (index > -1) {
             this.folders.splice(index, 1);
         }
     }
-    
+
     fensterClosed(fenster) {
         var index = this.fensters.indexOf(fenster);
         if (index > -1) {
             this.fensters.splice(index, 1);
         }
     }
-    
+
     private addFolder(folder: File) {
         if (this.folders.indexOf(folder) < 0) {
             this.folders.push(folder);
         }
     }
-    
+
     private addFenster(fenster: File) {
         if (this.fensters.indexOf(fenster) < 0) {
             this.fensters.push(fenster);

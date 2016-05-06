@@ -13,7 +13,7 @@ import {HTTP_PROVIDERS} from 'angular2/http';
     providers: [FileService, HTTP_PROVIDERS],
     viewProviders: []
 })
-export class FolderComponent {
+export class FolderComponent implements OnInit {
     public id: number = 1;
     public folder: File; // holds own File-Object
     public children: File[] = [];

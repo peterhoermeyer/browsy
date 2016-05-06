@@ -1,10 +1,11 @@
-<!-- Desktop consists of 1 opened folder component -->
-<div *ngIf="folders">
-    <folder *ngFor="#folder of folders" [folder]="folder" (fileClicked)="fileClicked($event)" (folderClosed)="folderClosed($event)"></folder>
+<!-- desktop root folder -->
+<div *ngIf="desktopFolder">
+    <folder [folder]="desktopFolder" (fileClicked)="fileClicked($event)" class="desktop-folder"></folder>
+    <folder *ngFor="#folder of folders, #idx = index" [folder]="folder" (fileClicked)="fileClicked($event)" (folderClosed)="folderClosed($event)"
+        [style.top]="idx*3+'em'" [style.left]="idx*5+'%'" class="folder"></folder>
 </div>
 
-<!-- opened files -->
+<!-- opened files == fensters -->
 <div *ngIf="fensters">
-    <h2>opened files</h2>
-    <fenster *ngFor="#fenster of fensters" [fenster]="fenster" (fensterClosed)="fensterClosed($event)"></fenster>
+    <fenster *ngFor="#fenster of fensters" [fenster]="fenster" (fensterClosed)="fensterClosed($event)" class="fenster"></fenster>
 </div>

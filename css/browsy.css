@@ -1,0 +1,36 @@
+.folder {
+    position: absolute;
+    z-index: 1000;
+    width: 40%;
+    height: 20em;
+    margin: 1%;
+    border: 1px solid rgba(20, 20, 20, .66);
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 1px 1px 4px #333;
+    transition: all 1s;
+}
+
+/*
+    Special fullscreen layout for the desktop folder
+*/
+.desktop-folder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.fenster {
+    position: absolute;
+    z-index: 5000;
+    float: left;
+    left: 5%;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(55, 55, 55, .6);
+    box-sizing: border-box;
+}
